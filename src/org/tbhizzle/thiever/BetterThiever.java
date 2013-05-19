@@ -85,8 +85,7 @@ public class BetterThiever extends ActiveScript implements PaintListener, MouseL
 				jobCollection.add(job);
 			}
 		}
-		jobContainer = new Tree(jobCollection.toArray(new Node[jobCollection
-				.size()]));
+		jobContainer = new Tree(jobCollection.toArray(new Node[jobCollection.size()]));
 	}
 
 	@Override
