@@ -8,19 +8,27 @@ import org.powerbot.game.api.methods.tab.Skills;
 
 public class Paint {
 	private static int successCount = 0 , failCount = 0;
+	private static int repaintCount = 0;
+	private static String xp;
 	
 	public static void onRepaint(Graphics g){
 		g.setColor(Color.WHITE);
-		g.fillRect(0, 0, 400, 100);
+		g.fillRect(6, 395, 506, 130);
 		
 		g.setColor(Color.BLACK);
-		g.drawString("Number of Pickpockets winss: " + successCount, 1 , 10);
-		g.drawString("Number of Pickpockets fails: " + failCount, 1 , 25);
-		g.drawString("Experience Gained: " + (Skills.getExperience(Skills.THIEVING) - Vars.getStartXP()) , 1 , 40);
-		g.drawString(printTime(System.currentTimeMillis() - Vars.getStartTime()),
-				1, 60);
+		g.drawString("Number of Pickpockets winss: " + successCount, 8 , 410);
+		g.drawString("Number of Pickpockets fails: " + failCount, 8 , 425);
+		g.drawString("Experience Gained: " + (Skills.getExperience(Skills.THIEVING) - Vars.getStartXP()) , 8 , 440);
+		g.drawString("Run Time: " + printTime(System.currentTimeMillis() - Vars.getStartTime()),
+				8, 455);
 		
-		g.drawString("XP per Hour: " + printXPRate() + "k",200 , 10);
+		if(repaintCount == 20){
+			repaintCount = 0;
+			xp = printTime(System.currentTimeMillis());
+		}
+		g.drawString("XP per Hour: " + printXPRate() + "k", 8 , 470);
+		
+		repaintCount++;
 	}
 
 	private static String printTime(long timeInMills){
