@@ -49,6 +49,7 @@ public class Banking extends Node {
 			sleep(200);// dynamic sleep
 		}
 		Bank.close();
+		
 	}
 
 }

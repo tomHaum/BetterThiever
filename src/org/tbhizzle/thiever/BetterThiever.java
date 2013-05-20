@@ -42,7 +42,7 @@ public class BetterThiever extends ActiveScript implements PaintListener, MouseL
 		
 		provide(new Steal(), new Walk(), new Banking(),
 				new EatFood());
-		Vars.setStartXP(Skills.getExperience(Skills.THIEVING));
+		
 
 		gui = new GUI();
 		gui.setVisible(true);
