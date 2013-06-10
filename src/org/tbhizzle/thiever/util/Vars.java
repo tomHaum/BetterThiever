@@ -26,7 +26,7 @@ public class Vars {
 	}
 	
 	
-	public static void setLowestHP(int hp){
+	public static void setLowestHP(final int hp){
 		lowestHP = hp;
 	}
 	public static int getLowestHP(){
@@ -34,7 +34,7 @@ public class Vars {
 	}
 	
 	
-	public static void setStartXP(int xp) {
+	public static void setStartXP(final int xp) {
 		startXP = xp;
 	}
 	public static int getStartXP() {
@@ -47,7 +47,7 @@ public class Vars {
 	}
 	
 	
-	public static void setTarget(Target t){
+	public static void setTarget(final Target t){
 		selectedTarget = t;
 	}
 	public static Target getTarget() {
@@ -55,7 +55,7 @@ public class Vars {
 	}
 
 	
-	public static void setFood(Food f){
+	public static void setFood(final Food f){
 		selectedFood = f;
 	}
 	public static Food getFood(){
@@ -80,7 +80,7 @@ public class Vars {
 	}
 	
 	
-	public static void setInventroyHasFood(boolean b){
+	public static void setInventroyHasFood(final boolean b){
 		inventoryHasFood = b;
 	}
 	public static boolean inventoryHasFood(){
