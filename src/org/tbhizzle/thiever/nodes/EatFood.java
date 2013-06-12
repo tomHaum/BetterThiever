@@ -10,7 +10,7 @@ import org.tbhizzle.thiever.util.Vars;
 
 public class EatFood extends Node{
 	private int inventoryCount;
-	private Timer t = new Timer(5000);
+	private final Timer t = new Timer(5000);
 	
 	public boolean activate() {
 		
@@ -23,7 +23,7 @@ public class EatFood extends Node{
 	public void execute() {
 		System.out.println("eating");
 		inventoryCount = Inventory.getCount();
-		WidgetChild foodWid = Inventory.getItem(Vars.getFood().getFoodID()).getWidgetChild();
+		final WidgetChild foodWid = Inventory.getItem(Vars.getFood().getFoodID()).getWidgetChild();
 		if(foodWid != null){
 			foodWid.interact("Eat");
 			t.reset();

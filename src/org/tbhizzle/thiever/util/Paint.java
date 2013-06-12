@@ -11,7 +11,7 @@ public class Paint {
 	private static int repaintCount = 0;
 	private static String xp;
 	
-	public static void onRepaint(Graphics g){
+	public static void onRepaint(final Graphics g){
 		g.setColor(Color.WHITE);
 		g.fillRect(6, 395, 506, 130);
 		
@@ -31,7 +31,7 @@ public class Paint {
 		repaintCount++;
 	}
 
-	private static String printTime(long timeInMills){
+	private static String printTime(final long timeInMills){
 		String time = String.format("%02d:%02d:%02d",
 				(timeInMills / 3600000) % 24,
 				(timeInMills / 60000) %60,
